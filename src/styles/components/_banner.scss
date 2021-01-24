@@ -1,0 +1,174 @@
+.banner {
+    position: relative;
+    height: 100vh;
+    z-index: 10;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(47, 24, 147) url("https://res.cloudinary.com/gopal1996/image/upload/v1611500356/Alphas9/banner_1_sx11rj.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    &__heading {
+        width: 100%;
+        margin: 1rem 0;
+
+        &-text {
+            color: #fff;
+            font-size: rem(48px);
+            text-align: left;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media screen and (min-width: 768px){
+            flex: 0 0 50%;
+            max-width: 50%;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+    &__content {
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: 768px){
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    &__float-image {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 100%;
+        max-width: 400px;
+        transform: translateY(-50%);
+        display: none;
+
+        @media screen and (min-width: 768px){
+            display: block;
+        }
+
+        @media (min-width: 992px) {
+            max-width: 600px;
+        }
+    }
+
+    &__paragraph {
+        margin: 1rem 0;
+
+        &-text {
+            color: #fff;
+            font-size: rem(24px);
+            text-align: left;
+        }
+    }
+
+    &__user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+
+        &-image {
+            width: rem(60px);
+            height: rem(60px);
+            border-radius: 50%;
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+            margin-right: 1rem;
+        }
+
+        &-name {
+            font-size: rem(22px);
+            color: #fff;
+        }
+
+        &-role {
+            font-size: rem(14px);
+            color: #fff;
+        }
+
+        &-details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+
+    &__button {
+        background: #25dac5;
+        color: #fff;
+        border-radius: 100px;
+        padding: 1rem 1.2rem;
+        margin: 1rem 0;
+        border: none;
+        font-size: rem(20px);
+    }
+
+    &__social-media {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        &__item {
+            width: 61px;
+            height: 61px;
+            border-radius: 50%;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &--facebook {
+                background: #4267b2;
+            }
+
+            &--instagram {
+                background: #e94c88;
+            }
+
+            &--twitter {
+                background: #1da1f2;
+            }
+
+            &--linkedin {
+                background: #0077b5;
+            }
+
+            
+        }
+
+        &__icon {
+            color: #fff;
+            font-size: 2rem;
+        }
+    }
+}
