@@ -1,0 +1,65 @@
+Table Structure:
+    
+    AccountType:
+        Id:
+        Type:
+        Period(in Days):
+        Rate:
+        
+    TemplateDetails:
+        ID(pkey):
+        TemplateName:
+    
+    CompanyDetails:
+        Id:
+        Name:
+        Email:
+        Country:
+        Phone:
+        Domain:
+        TemplateID(Fkey): 
+        AccountID(Fkey):
+        Expiry:
+        NewsLetter:
+        
+    Section:
+        Id:
+        header:
+    
+    CompanySessionMap: (PK compnyID+sectionID)
+        id:
+        companyID(Fkey):
+        sectionID(Fkey):
+        Enabled:
+        
+    Sectiondetails: 
+        Id:
+        companyID(Fkey):
+        sectionID(Fkey):
+        counter:
+        value:
+
+    User:
+        Id:
+        Name:
+        emailId:
+        Address:
+        Country:
+        Role: (checker,Maker,Admin)
+    
+    UserAppMap: (PK CompanyID+UserID)
+        id:
+        UserID(Fkey):
+        CompanyID(Fkey):
+    
+    PaymentTable:
+        ID:
+        userID(fkey):
+        CompanyID(fkey):
+        AccountTypeID((fkey)):
+        PaymentMode:['Cash','card','gpay']
+        Description:
+        AmountPaid:
+        Pending:
+        
+        
