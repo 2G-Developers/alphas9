@@ -1,0 +1,54 @@
+.brochure {
+    padding: 2rem 0;
+    background: #eee;
+
+    &__wrapper {
+        position: relative;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        min-height: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: 768px) {
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width: 992px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+
+    &__text {
+        font-size: rem(58px);
+        font-weight: 700;
+        line-height: 50px;
+        color: #1E0E62;
+    }
+
+    &__download {
+        text-decoration: none;
+        color: #fff;
+        font-size: rem(20px);
+        background: #25DAC5;
+        border-radius: 100px;
+        height: 50px;
+        padding: 0 3rem;
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
+        &:focus, &:active {
+            outline: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+}

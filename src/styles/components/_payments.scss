@@ -1,0 +1,124 @@
+.payments {
+    padding: 5rem 0;
+    overflow: hidden;
+
+    &__wrapper {
+        position: relative;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        min-height: 1px;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        @media screen and (min-width: 992px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+
+    &__heading {
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 3rem;
+        width: 100%;
+
+        @media screen and (min-width: 992px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        &-text {
+            font-size: rem(38px);
+            font-weight: 700;
+            line-height: 52px;
+            color: #1E0E62;
+            text-align: center;
+            width: 100%;
+
+            @media screen and (min-width: 992px) {
+                font-size: rem(42px);
+            }
+        }
+    }
+
+    &__list {
+        padding: 3rem 2rem;
+        border: 1px solid #25DAC4;
+        border-radius: 10px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        &--column {
+            flex-direction: column;
+        }
+    }
+
+    &__circle {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #25DAC4;
+        margin-right: 2rem;
+
+        &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #1E0E62;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        row-gap: 2rem;
+        width: 100%;
+        margin-left: 3.3rem;
+        margin-top: 2rem;
+    }
+
+    &__details {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+
+        &--secondary {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+
+    &__vendor {
+        font-size: rem(18px);
+        color: #1E0E62;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+    }
+
+    &__text {
+        font-size: rem(18px);
+        font-weight: 500;
+        color: #4C5A6B;
+    }
+}

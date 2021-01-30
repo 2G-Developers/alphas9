@@ -1,0 +1,73 @@
+.videos {
+    position: relative;
+    padding: 5rem 0;
+    background: #2F1893;
+
+    &__wrapper {
+        position: relative;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        min-height: 1px;
+
+        @media screen and (min-width: 992px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+
+    &__heading {
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 3rem;
+        width: 100%;
+
+        @media screen and (min-width: 992px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        &-text {
+            font-size: rem(38px);
+            font-weight: 700;
+            line-height: 52px;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+
+            @media screen and (min-width: 992px) {
+                font-size: rem(42px);
+                width: 70%;
+            }
+        }
+    }
+
+    &__youtube {
+        height: 300px !important;
+        padding: 2rem;
+
+        @media screen and (min-width: 768px) {
+            height: 600px !important;
+        }
+    }
+
+    &__button {
+        padding: .5rem 2rem;
+        color: #fff;
+        margin-top: 2rem;
+        text-align: center;
+        background: transparent;
+        font-size: rem(20px);
+        border-radius: 50px;
+        border: 1px solid #fff;
+        outline: none;
+        text-decoration: none;
+
+        &:focus,:active {
+            outline: none;
+        }
+    }
+}

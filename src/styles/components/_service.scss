@@ -1,0 +1,147 @@
+.service {
+    padding: 5rem 0;
+
+    &__wrapper {
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        min-height: 1px;
+
+        @media screen and (min-width: 768px){
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        @media screen and (min-width: 992px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+
+    &__heading {
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media screen and (min-width: 992px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        &-text {
+            font-size: rem(38px);
+            font-weight: 700;
+            line-height: 52px;
+            color: #1E0E62;
+            text-align: left;
+            width: 100%;
+
+            @media screen and (min-width: 992px) {
+                font-size: rem(42px);
+                width: 70%;
+            }
+        }
+
+        &-subheading {
+            color: #4C5A6B;
+            font-weight: 700;
+            font-size: rem(14px);
+            line-height: 26px;
+            text-align: left;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 2.5rem 0;
+    }
+
+    &__icon {
+        width: rem(45px);
+        height: rem(45px);
+        color: #fff;
+    }
+
+    &__text {
+        font-size: rem(22px);
+        color: #1E0E62;
+        text-align: left;
+    }
+
+    &__card {
+        width: 80px;
+        height: 80px;
+        flex: 0 0 80px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    }
+}
+
+
+// Angular gradient color
+
+.gradient {
+
+    &--one {
+        background: conic-gradient(from 270deg at 80% 100%, #E79C2B -66.28deg, #482BE7 3.96deg, #E72BA7 70.73deg, #E7D42B 135.81deg, #892BE7 225.96deg, #E79C2B 293.72deg, #482BE7 363.96deg);
+    }
+
+    &--two {
+        background: conic-gradient(from 47.11deg at 100% 88.75%, #D2D622 -37.4deg, #1A1893 207.92deg, #E91D1D 241.75deg, #D2D622 322.6deg, #1A1893 567.92deg);
+    }
+
+    &--three {
+        background: conic-gradient(from 97.43deg at 6.88% 94.37%, #E72B7A -8.57deg, #2BE7D0 260.42deg, #E72B7A 351.43deg, #2BE7D0 620.42deg);
+    }
+
+    &--four {
+        background: conic-gradient(from 270deg at 72% 100%, #FF2F2F 0deg, #4B2EFC 90deg, #53B8FE 183.75deg, #2DA185 228.75deg, #F32C2C 360deg);
+    }
+
+    &--five {
+        background: conic-gradient(from 186.82deg at 0% 15.62%, #B71F9F 0deg, #2B33E7 88.69deg, #E7852B 181.62deg, #29D1C7 271.84deg, #B71F9F 360deg);
+    }
+
+    &--six {
+        background: conic-gradient(from -80.71deg at 95% 92.5%, #FF701F -28.63deg, #9638CF 43.36deg, #1D9AE0 92.05deg, #FF701F 331.37deg, #9638CF 403.36deg);
+    }
+
+    &--seven {
+        background: conic-gradient(from 270deg at 89.17% 100%, #4624FF -214.15deg, #29CCAF 19.09deg, #E82298 95.04deg, #4624FF 145.85deg, #29CCAF 379.09deg);
+    }
+
+    &--eight {
+        background: conic-gradient(from 270deg at 61.67% 100%, #F5A732 0deg, #C624FF 159.38deg, #5522E8 360deg);
+    }
+
+    &--nine {
+        background: conic-gradient(from 128.67deg at 9.17% 6.25%, #DA3C62 0deg, #A347C4 68.15deg, #F05A5A 317.14deg, #DA3C62 360deg);
+    }
+
+    &--ten {
+        background: conic-gradient(from 206.57deg at 100% 0%, #E6A0A0 -46.19deg, #E82298 17.47deg, #3EAEFF 70.49deg, #E6A0A0 313.81deg, #E82298 377.47deg);
+    }
+
+    &--eleven {
+        background: conic-gradient(from 206.57deg at 100% 0%, #E6A0A0 -46.19deg, #E82298 17.47deg, #3EAEFF 70.49deg, #E6A0A0 313.81deg, #E82298 377.47deg);
+    }
+
+    &--twelve {
+        background: conic-gradient(from 140.47deg at 5% 4.58%, #085EDE -4.81deg, #F3752E 41.85deg, #8B24DC 300.1deg, #085EDE 355.19deg, #F3752E 401.85deg);
+    }
+
+    &--thirteen {
+        background: conic-gradient(from -90deg at 100% 100%, #E82298 -10.61deg, #00BDE7 91.21deg, #E82298 349.39deg, #00BDE7 451.21deg);
+    }
+
+    &--fourteen {
+        background: conic-gradient(from 203.63deg at 93.75% 0%, #E8225D -46.47deg, #E69823 15.85deg, #18F3BF 71.93deg, #E8225D 313.53deg, #E69823 375.85deg);
+    }
+}
