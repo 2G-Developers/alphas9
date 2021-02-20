@@ -4,28 +4,28 @@ import React from 'react'
 import {FaFacebookF, FaLinkedinIn, FaInstagram} from 'react-icons/fa'
 import {AiOutlineTwitter} from 'react-icons/ai'
 
-const Banner = () => {
+const Banner = ({data}) => {
     return (
         <section className="banner">
             <div className="container" style={{height: "100%"}}>
                 <div className="row" style={{height: "100%"}}>
                     <div className="banner__wrapper">
                         <div className="banner__heading">
-                            <h3 className="banner__heading-text">Alphas9.com</h3>
+                            <h3 className="banner__heading-text">{data?.value?.header[0]}</h3>
                         </div>
 
                         <div className="banner__paragraph">
                             <p className="banner__paragraph-text">
-                            We have created a new product that will help designers, developers and companies create websites for their startups quickly and easily.
+                            {data?.value?.paragraph[0]}
                             </p>
                         </div>
 
                         <div className="banner__user">
-                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Founder" className="banner__user-image"/>
+                            <img src={data?.value?.founderimg[0]} alt="Founder" className="banner__user-image"/>
 
                             <div className="banner__user-details">
-                                <p className="banner__user-name">Babu Sesh</p>
-                                <span className="banner__user-role">Founder</span>
+                                <p className="banner__user-name">{data?.value?.foundername[0]}</p>
+                                <span className="banner__user-role">{data?.value?.founderrole[0]}</span>
                             </div>
                         </div>
 

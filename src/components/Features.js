@@ -1,39 +1,26 @@
 import React from 'react'
 
-import {
-    FiTv, 
-    FiGift, 
-    FiKey, 
-    FiLayout, 
-    FiServer, 
-    FiSunrise,
-    FiStar,
-    FiShield,
-    FiRadio,
-    FiSettings,
-    FiSliders,
-    FiTwitter
-} from 'react-icons/fi'
-
-const Features = () => {
+const Features = ({data}) => {
     return (
         <section className="features">
             <div className="container">
                 <div className="row">
                     <div className="features__heading">
-                        <h2 className="features__heading-text">FEATURES OF WHAT ARE WE?!</h2>
+                        <h2 className="features__heading-text">{data?.value?.header[0]}</h2>
                     </div>
 
                     <div className="features__wrapper">
-                        <div className="features__item">
-                            <div className="features__card gradient--one">
-                                <FiTv className="features__icon" />
+                        {data?.value?.icon.map((item, idx) => (
+                            <div className="features__item" key={idx}>
+                                <div className="features__card gradient--one">
+                                    <i className={`fa ${item.className} features__icon`} />
+                                </div>
+                                <p className="features__text">
+                                    {item.value}
+                                </p>
                             </div>
-                            <p className="features__text">
-                                Click, Call and Business!
-                            </p>
-                        </div>
-                        <div className="features__item">
+                        ))}
+                        {/* <div className="features__item">
                             <div className="features__card gradient--two">
                                 <FiGift className="features__icon" />
                             </div>
@@ -122,7 +109,7 @@ const Features = () => {
                             <p className="features__text">
                                 Enquiry Form
                             </p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

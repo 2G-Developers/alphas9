@@ -1,18 +1,28 @@
 import React from 'react'
 
-import {FiTv, FiGift, FiKey, FiLayout, FiServer, FiSunrise} from 'react-icons/fi'
-
-const Service = () => {
+const Service = ({data}) => {
     return (
         <section className="service">
             <div className="container">
                 <div className="row">
                     <div className="service__heading">
                         <h6 className="service__heading-subheading">Feature Happiness</h6>
-                        <h2 className="service__heading-text">What is the benefit of Digital Business Card ?</h2>
+                        <h2 className="service__heading-text">{data?.value?.header[0]}</h2>
                     </div>
                     <div className="service__wrapper">
-                        <div className="service__item">
+                        {
+                            data?.value?.icon.slice(0, data?.value?.icon.length / 2).map((item, idx) => (
+                                <div className="service__item" key={idx}>
+                                    <div className="service__card gradient--one">
+                                        <i className={`fa ${item.className} service__icon`} />
+                                    </div>
+                                    <p className="service__text">
+                                        {item.value}
+                                    </p>
+                                </div>
+                            ))
+                        }
+                        {/* <div className="service__item">
                             <div className="service__card gradient--one">
                                 <FiTv className="service__icon" />
                             </div>
@@ -35,10 +45,22 @@ const Service = () => {
                             <p className="service__text">
                                 Gallery (25 photos)
                             </p>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="service__wrapper">
-                        <div className="service__item">
+                        {
+                            data?.value?.icon.slice(data?.value?.icon.length / 2).map((item, idx) => (
+                                <div className="service__item" key={idx}>
+                                    <div className="service__card gradient--one">
+                                        <i className={`fa ${item.className} service__icon`} />
+                                    </div>
+                                    <p className="service__text">
+                                        {item.value}
+                                    </p>
+                                </div>
+                            ))
+                        }
+                        {/* <div className="service__item">
                             <div className="service__card gradient--four">
                                 <FiLayout className="service__icon" />
                             </div>
@@ -61,7 +83,7 @@ const Service = () => {
                             <p className="service__text">
                                 Upload Pdf (5 no)
                             </p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

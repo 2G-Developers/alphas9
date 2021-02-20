@@ -3,7 +3,7 @@ import {IoIosCall} from 'react-icons/io'
 import {HiMail} from 'react-icons/hi'
 import {ImWhatsapp} from 'react-icons/im'
 
-const Contact = () => {
+const Contact = ({data}) => {
     return (
         <section className="contact">
             <div className="container">
@@ -18,14 +18,14 @@ const Contact = () => {
                             <div className="contact__top">
                                 <div className="contact__paragraph">
                                     <p>
-                                    We appreciate each customer and we are proud that 60% of clients come back to work with us again.
+                                        {data?.value?.desc[0]}
                                     </p>
                                 </div>
 
                                 <div className="contact__details">
-                                    <a href="mailto:info@alphas9.com" className="contact__link"><IoIosCall className="contact__icons" color="#25DAC5" />+9999999999</a>
-                                    <a href="mailto:info@alphas9.com" className="contact__link"><HiMail className="contact__icons" color="#25DAC5" />info@alphas9.com</a>
-                                    <a href="mailto:info@alphas9.com" className="contact__link"><ImWhatsapp className="contact__icons" color="#25DAC5" />+9999999999</a>
+                                    <a href="mailto:info@alphas9.com" className="contact__link"><IoIosCall className="contact__icons" color="#25DAC5" />{data?.value?.phone[0]}</a>
+                                    <a href="mailto:info@alphas9.com" className="contact__link"><HiMail className="contact__icons" color="#25DAC5" />{data?.value?.email[0]}</a>
+                                    <a href="mailto:info@alphas9.com" className="contact__link"><ImWhatsapp className="contact__icons" color="#25DAC5" />{data?.value?.whatsapp[0]}</a>
                                 </div>
                             </div>
 
@@ -35,11 +35,11 @@ const Contact = () => {
                                 </div>
 
                                 <div className="contact__paragraph" style={{marginBottom: 0}}>
-                                    <p>Via Birkenweg 37, Bruck, Erlangen 91058</p>
+                                    <p>Via {data?.value?.maplocation[0]}</p>
                                 </div>
 
                                 <div className="contact__map">
-                                    <iframe style={{pointerEvents: 'none'}} width="100%" height="100%" title="map" src="https://maps.google.com/maps?q=Birkenweg%2037%2C%20Bruck%2C%20Erlangen%2091058&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
+                                    <iframe style={{pointerEvents: 'none'}} width="100%" height="100%" title="map" src={data?.value?.mapurl[0]} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
                                 </div>
                             </div>
                         </div>
