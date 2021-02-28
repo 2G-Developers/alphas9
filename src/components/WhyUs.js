@@ -3,7 +3,7 @@ import {FiBriefcase} from 'react-icons/fi'
 
 const WhyUs = ({data}) => {
     return (
-        <section className="whyus">
+        <section id="Whyus" className="whyus">
             <div className="container">
                 <div className="row">
                     <div className="whyus__wrapper">

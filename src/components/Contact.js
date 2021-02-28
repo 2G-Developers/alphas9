@@ -5,7 +5,7 @@ import {ImWhatsapp} from 'react-icons/im'
 
 const Contact = ({data}) => {
     return (
-        <section className="contact">
+        <section id="Contact" className="contact">
             <div className="container">
                 <div className="row">
                     <div className="contact__wrapper">

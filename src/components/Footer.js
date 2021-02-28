@@ -1,8 +1,8 @@
 import React from 'react'
 
-import {FaGoogle, FaTwitter, FaFacebookF} from 'react-icons/fa'
+import {FaTwitter, FaFacebookF, FaInstagram} from 'react-icons/fa'
 
-const Footer = () => {
+const Footer = ({social}) => {
     return (
         <footer className="footer">
             <div className="footer__logo">Alphas9</div>
@@ -15,18 +15,18 @@ const Footer = () => {
             <p className="footer__link">copyright@2021</p>
             <ul className="footer__social">
                 <li className="footer__social-list">
-                    <a href="https://facebook.com" className="footer__social-link">
+                    <a href={social?.value?.twitter[0]} className="footer__social-link">
                         <FaTwitter />
                     </a>
                 </li>
                 <li className="footer__social-list">
-                    <a href="https://facebook.com" className="footer__social-link">
+                    <a href={social?.value?.facebook[0]} className="footer__social-link">
                         <FaFacebookF />
                     </a>
                 </li>
                 <li className="footer__social-list">
-                    <a href="https://facebook.com" className="footer__social-link">
-                        <FaGoogle />
+                    <a href={social?.value?.instagram[0]} className="footer__social-link">
+                        <FaInstagram />
                     </a>
                 </li>
             </ul>

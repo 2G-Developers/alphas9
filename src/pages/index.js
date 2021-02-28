@@ -5,6 +5,7 @@ import Brochure from "../components/Brochure"
 import Contact from "../components/Contact"
 import Features from "../components/Features"
 import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
 // import Gallery from "../components/Gallery"
 import Payments from "../components/Payments"
 import Service from "../components/Service"
@@ -15,22 +16,26 @@ import '../styles/main.scss'
 // markup
 const IndexPage = () => {
   const [data, setData] = useState("")
+  const [seachString, setSearchString] = useState(window.location.search)
 
   useEffect(() => {
+    let companyName = seachString ? seachString : "null"
     async function fetchData() {
-        const response = await fetch("http://python.alphas9.com/get/company/3")
+        // const response = await fetch("http://python.alphas9.com/get/company/3")
+        const response = await fetch(`http://python.alphas9.com/get/company_name/${companyName.slice(1)}`)
         const payload = await response.json()
         setData(payload)
         console.log(payload)
     }
     fetchData()
-  }, [])
+  }, [seachString])
 
   return (
     <main>
       <title>Home Page</title>
-      <Banner data={data?.Home} />
-      <About data={data?.About} />
+      <Navbar list={data} />
+      <Banner data={data?.Home} social={data?.Socialmedia} />
+      {data?.About ? <About data={data?.About} /> : null }
       <WhyUs data={data?.Whyus} />
       <Brochure />
       <Service data={data?.Services} />
@@ -39,7 +44,7 @@ const IndexPage = () => {
       <Videos data={data?.Video} />
       <Payments data={data?.Payment} />
       <Contact data={data?.Contact} />
-      <Footer />
+      <Footer social={data?.Socialmedia} />
     </main>
   )
 }

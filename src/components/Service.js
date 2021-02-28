@@ -2,7 +2,7 @@ import React from 'react'
 
 const Service = ({data}) => {
     return (
-        <section className="service">
+        <section id="Services" className="service">
             <div className="container">
                 <div className="row">
                     <div className="service__heading">

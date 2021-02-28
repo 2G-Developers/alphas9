@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player/lazy'
 
 const Videos = ({data}) => {
     return (
-        <section className="videos">
+        <section id="Video" className="videos">
             <div className="container">
                 <div className="row" style={{justifyContent: "center"}}>
                     <div className="videos__heading">

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gallery = () => {
     return (
-        <section className="gallery">
+        <section id="Gallery" className="gallery">
             <div className="container">
                 <div className="row" style={{justifyContent: "center"}}>
                     <div className="gallery__heading">

@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = ({data}) => {
     return (
-        <section className="about">
+        <section id="About" className="about">
             <div className="container">
                 <div className="row">
                     <div className="about__wrapper about__wrapper--order">

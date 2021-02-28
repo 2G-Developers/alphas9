@@ -2,7 +2,7 @@ import React from 'react'
 
 const Payments = ({data}) => {
     return (
-        <section className="payments">
+        <section id="Payment" className="payments">
             <div className="container">
                 <div className="row">
                 <div className="payments__heading">

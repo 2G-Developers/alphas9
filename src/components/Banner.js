@@ -4,7 +4,7 @@ import React from 'react'
 import {FaFacebookF, FaLinkedinIn, FaInstagram} from 'react-icons/fa'
 import {AiOutlineTwitter} from 'react-icons/ai'
 
-const Banner = ({data}) => {
+const Banner = ({data, social}) => {
     return (
         <section className="banner">
             <div className="container" style={{height: "100%"}}>
@@ -32,10 +32,10 @@ const Banner = ({data}) => {
                         <button className="banner__button">Get Started for Free</button>
 
                         <ul className="banner__social-media">
-                            <li className="banner__social-media__item banner__social-media__item--facebook"><FaFacebookF className="banner__social-media__icon" /></li>
-                            <li className="banner__social-media__item banner__social-media__item--instagram"><FaInstagram className="banner__social-media__icon" /></li>
-                            <li className="banner__social-media__item banner__social-media__item--twitter"><AiOutlineTwitter className="banner__social-media__icon" /></li>
-                            <li className="banner__social-media__item banner__social-media__item--linkedin"><FaLinkedinIn className="banner__social-media__icon" /></li>
+                            <li className="banner__social-media__item banner__social-media__item--facebook"><a href={social?.value?.facebook[0]}><FaFacebookF aria-label="Icon" className="banner__social-media__icon" /></a></li>
+                            <li className="banner__social-media__item banner__social-media__item--instagram"><a href={social?.value?.instagram[0]}><FaInstagram aria-label="Icon" className="banner__social-media__icon" /></a></li>
+                            <li className="banner__social-media__item banner__social-media__item--twitter"><a href={social?.value?.twitter[0]}><AiOutlineTwitter aria-label="Icon" className="banner__social-media__icon" /></a></li>
+                            <li className="banner__social-media__item banner__social-media__item--linkedin"><a href={social?.value?.linkdin[0]}><FaLinkedinIn aria-label="Icon" className="banner__social-media__icon" /></a></li>
                         </ul>
                     </div>
 
