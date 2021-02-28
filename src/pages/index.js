@@ -11,6 +11,7 @@ import Payments from "../components/Payments"
 import Service from "../components/Service"
 import Videos from "../components/Videos"
 import WhyUs from "../components/WhyUs"
+import { BASE_URL } from "../data/env"
 import '../styles/main.scss'
 
 // markup
@@ -22,7 +23,7 @@ const IndexPage = () => {
     let companyName = seachString ? seachString : "null"
     async function fetchData() {
         // const response = await fetch("http://python.alphas9.com/get/company/3")
-        const response = await fetch(`http://python.alphas9.com/get/company_name/${companyName.slice(1)}`)
+        const response = await fetch(`${BASE_URL}/get/company_name/${companyName.slice(1)}`)
         const payload = await response.json()
         setData(payload)
         console.log(payload)
