@@ -17,7 +17,7 @@ import '../styles/main.scss'
 // markup
 const IndexPage = () => {
   const [data, setData] = useState("")
-  const [seachString, setSearchString] = useState(window.location.search)
+  const [seachString, setSearchString] = useState()
 
   useEffect(() => {
     let companyName = seachString ? seachString : "null"
