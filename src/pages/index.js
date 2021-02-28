@@ -26,7 +26,7 @@ const IndexPage = () => {
         const response = await fetch(`${BASE_URL}/get/company_name/${companyName.slice(1)}`)
         const payload = await response.json()
         setData(payload)
-        console.log(payload)
+        setSearchString(window.location.search)
     }
     fetchData()
   }, [seachString])
